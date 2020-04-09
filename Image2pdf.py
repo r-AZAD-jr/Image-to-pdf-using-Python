@@ -26,10 +26,11 @@ for root, d_names, f_names in os.walk(path_to_comics):
         is_save_once = True
         list_of_name = d_names
     elif index < len(list_of_name):
-        # print("\n" + list_of_name[index] + " has " + str(len(f_names)) + " elements.")
         if not f_names:
+            print(list_of_name[index] + " has " + str(len(f_names)) + " elements.\n")
             index = index + 1
             continue
+        print(list_of_name[index] + " has " + str(len(f_names)) + " elements.")
         save_image_pdf(list_of_name[index], root, f_names)
-        print("Comics number = " + str(index + 1) + ", name = " + list_of_name[index] + ".pdf, is Finished!!")
+        print("Comics number = " + str(index + 1) + ", name = " + list_of_name[index] + ".pdf, is Finished!!\n")
         index = index + 1
