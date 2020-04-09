@@ -26,7 +26,7 @@ for root, d_names, f_names in os.walk(path_to_comics):
         is_save_once = True
         list_of_name = d_names
     elif index < len(list_of_name):
-        print(list_of_name[index] + " has " + str(len(f_names)) + " elements.")
+        # print(list_of_name[index] + " has " + str(len(f_names)) + " elements.")
         if not f_names:
             index = index + 1
             continue
